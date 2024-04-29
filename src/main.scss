@@ -16,32 +16,82 @@ body {
 	padding: 1.5rem;
 	display: inline-grid;
 	grid-template-columns: 1fr 25rem;
+	grid-template-areas: 'content image';
 	background-color: #fff;
 	border-radius: 2.25rem;
 	box-shadow: 0px 4px 50px 0px $Clr-neutral-Dark-Slate-Grey;
 	&__content {
-		width: 25.5rem;
+		padding: 2.5rem;
+		max-width: 28.5rem;
+		grid-area: content;
 		&-title {
+			line-height: 1;
 			font-size: 3.5rem;
 			font-weight: $Fw-bold;
+			margin-bottom: 1.5rem;
 		}
 		&-description {
 			font-size: 1rem;
 			font-weight: $Fw-regular;
 			line-height: 148.4%;
+			margin-bottom: 1.5rem;
 		}
 		&-updateItems {
 			font-size: 1rem;
 			font-weight: $Fw-regular;
 			display: grid;
 			grid-template-columns: 21px 1fr;
-			& p {
-				margin-left: 1rem;
-			}
+			gap: 1rem;
+			margin-bottom: 2.7rem;
 		}
-		&-form {
+		&__form {
 			display: grid;
 			grid-template-columns: 1fr;
+			gap: 0.5rem;
+			&-email {
+				border-radius: 0.5rem;
+				padding: 1rem;
+				border: 1px solid $Clr-neutral-Grey;
+				margin-bottom: 1rem;
+				&:focus {
+					outline: none;
+					border: 1px solid $Clr-neutral-Dark-Slate-Grey;
+					color: $Clr-neutral-Dark-Slate-Grey;
+				}
+			}
+			&-submitButton {
+				border-radius: 0.5rem;
+				padding: 1rem;
+				border: none;
+				color: #fff;
+				background-color: $Clr-neutral-Dark-Slate-Grey;
+				transition: 5ms;
+				&:hover {
+					background: linear-gradient(90deg, #ff5277 0%, #ff6257 100%);
+					box-shadow: 0px 15px 30px 0px rgba(255, 97, 85, 0.5);
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	&__image {
+		grid-area: 'image';
+	}
+}
+@media (max-width: 750px) {
+	.card {
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			'image'
+			'content';
+		padding: 0;
+		border-radius: 0;
+		width: 23.4375rem;
+		&__content {
+			padding: 2.3rem 1.5rem;
+			&-title {
+				font-size: 2.5rem;
+			}
 		}
 	}
 }
