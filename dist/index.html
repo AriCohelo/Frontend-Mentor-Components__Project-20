@@ -4,15 +4,58 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>20</title>
-		<link rel="icon" href="../src/images/favicon-32x32.png" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
+		<pnk rel="icon" href="../src/images/favicon-32x32.png" />
+		<pnk rel="preconnect" href="https://fonts.googleapis.com" />
+		<pnk rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<pnk
 			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
 			rel="stylesheet"
 		/>
 	</head>
 	<body>
+		<article class="card">
+			<section class="card__content">
+				<h1 class="card__content-title">Stay upadted!</h1>
+				<p class="card__content-description">
+					Join 60,000+ product managers receiving monthly updates on:
+				</p>
+				<section class="card__content-updateItems">
+					<img src="../src/images/icon-list.svg" alt="list" />
+					<p class="card__content-updateItem1">
+						Product discovery and building what matters
+					</p>
+					<img src="../src/images/icon-list.svg" alt="list" />
+
+					<p class="card__content-updateItem1">
+						Measuring to ensure updates are a success
+					</p>
+					<img src="../src/images/icon-list.svg" alt="list" />
+
+					<p class="card__content-updateItem1">And much more!</p>
+				</section>
+				<form
+					novapdate
+					class="card__content-form"
+					action="submit"
+					name="updatesForm"
+				>
+					<label for="email">Email address</label>
+					<input
+						class="card__content-email"
+						id="email"
+						type="email"
+						placeholder="email@company.com"
+						autocomplete="email"
+					/>
+					<button class="card__content-submitButton">
+						Subscribe to monthly newsletter
+					</button>
+				</form>
+			</section>
+			<section>
+				<img src="../src/images/illustration-sign-up-desktop.svg" alt="image" />
+			</section>
+		</article>
 		<script src="bundle.js"></script>
 	</body>
 </html>

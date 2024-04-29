@@ -5,5 +5,43 @@
 body {
 	font-size: 16px;
 	font-family: $Ff-primary;
-	background-color: rgb(255, 221, 0);
+	background-color: $Clr-neutral-Dark-Slate-Grey;
+	// padding: 14rem 16rem 14rem 16rem;
+	display: grid;
+	place-content: center;
+	min-height: 100vh;
+	color: $Clr-neutral-Dark-Slate-Grey;
+}
+.card {
+	padding: 1.5rem;
+	display: inline-grid;
+	grid-template-columns: 1fr 25rem;
+	background-color: #fff;
+	border-radius: 2.25rem;
+	box-shadow: 0px 4px 50px 0px $Clr-neutral-Dark-Slate-Grey;
+	&__content {
+		width: 25.5rem;
+		&-title {
+			font-size: 3.5rem;
+			font-weight: $Fw-bold;
+		}
+		&-description {
+			font-size: 1rem;
+			font-weight: $Fw-regular;
+			line-height: 148.4%;
+		}
+		&-updateItems {
+			font-size: 1rem;
+			font-weight: $Fw-regular;
+			display: grid;
+			grid-template-columns: 21px 1fr;
+			& p {
+				margin-left: 1rem;
+			}
+		}
+		&-form {
+			display: grid;
+			grid-template-columns: 1fr;
+		}
+	}
 }
