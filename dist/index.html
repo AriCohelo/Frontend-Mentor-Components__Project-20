@@ -34,12 +34,14 @@
 					<p class="card__content-updateItem1">And much more!</p>
 				</section>
 				<form
-					novapdate
+					novalidate
 					class="card__content__form"
-					action="submit"
+					action="#"
 					name="updatesForm"
 				>
-					<label for="email">Email address</label>
+					<label class="card__content__form-label" for="email"
+						>Email address</label
+					>
 					<input
 						class="card__content__form-email"
 						id="email"
@@ -47,6 +49,7 @@
 						placeholder="email@company.com"
 						autocomplete="email"
 					/>
+					<p class="card__content__form-email-error">Valid email required</p>
 					<button class="card__content__form-submitButton">
 						Subscribe to monthly newsletter
 					</button>
@@ -59,6 +62,19 @@
 				/>
 				<img src="../src/images/illustration-sign-up-desktop.svg" alt="image" />
 			</picture>
+		</article>
+		<article class="confirmationCard">
+			<img
+				class="confirmationCard-icon"
+				src="../src/images/icon-success.svg"
+				alt="succes"
+			/>
+			<h1 class="confirmationCard-title">Thanks for subscribing!</h1>
+			<p class="confirmationCard-description">
+				A confirmation email has been sent to ash@loremcompany.com. Please open
+				it and click the button inside to confirm your subscription.
+			</p>
+			<button class="confirmationCard-dismissButton">Dismiss message</button>
 		</article>
 		<script src="bundle.js"></script>
 	</body>
